@@ -11,7 +11,7 @@ docker run --rm --net cbio-net \
     -v "$PWD"/study-dir:/study:ro \
     -v "$HOME"/Desktop:/outdir \
     cbioportal-image \
-    metaImport.py -u http://cbioportal-container:8080/cbioportal -s /study --html=/outdir/report.html
+    metaImport.py --jar_path=/usr/local/tomcat/webapps/cbioportal/WEB-INF/lib/core-1.2.5.jar -u http://cbioportal-container:8080/cbioportal -s /study --html=/outdir/report.html
 ```
 
 ### Running cBioPortal code from a local folder ###
